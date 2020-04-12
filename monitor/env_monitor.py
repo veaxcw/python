@@ -59,5 +59,5 @@ def disk_partitions(all=False):
         if device == "none":
             device = ""
         d_tuple = disk_tuple(device, mount_point, fstype)
-        result.append(disk_tuple)
+        result.append(d_tuple)
     return result
