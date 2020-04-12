@@ -39,7 +39,7 @@ def disk_state(path):
 # 获取分区详情
 def disk_partitions(all=False):
     physical_devices = []
-    f = open("/proc/filesystem", "r")
+    f = open("/proc/filesystems", "r")
     for line in f:
         if not line.startswith("none"):
             continue
