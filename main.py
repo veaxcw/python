@@ -8,4 +8,8 @@ sys.path.insert(0, dir_test)
 
 if __name__ == '__main__':
     # env_monitor.get_memory_info()
-    print(env_monitor.disk_partitions(True))
+    result = env_monitor.disk_partitions(True)
+    for r in result:
+        print("device:" + r.device)
+        print("mount_point:" + r.mount_point)
+        print("fstype:" + r.fstype)
