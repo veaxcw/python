@@ -41,14 +41,14 @@ def disk_partitions(all=False):
     physical_devices = []
     f = open("/proc/filesystems", "r")
     for line in f:
-        if not line.startswith("none"):
+        if line.startswith("none"):
             continue
         physical_devices.append(line.strip())
 
     result = []
     f = open("/etc/mtab", "r")
     for line in f:
-        if not line.startswith("none"):
+        if line.startswith("none"):
             continue
         fields = line.split()
         device = fields[0]
